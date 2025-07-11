@@ -20,9 +20,11 @@ try:
     from API_functionalities import *
     from system_operations import *
     from browsing_functionalities import *
-except (ImportError, SystemError, Exception, KeyboardInterrupt) as e:
+except Exception as e:
     print("ERROR OCCURRED WHILE IMPORTING THE MODULES")
-    exit(0)
+    print("DETAILS:", e)
+    exit(1)
+
 
 '''
 import os
